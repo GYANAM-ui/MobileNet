@@ -32,6 +32,9 @@ function check()
 {
     img = document.getElementById("captured_image");
     classifier.classify(img,gotResult);
+    if (img=null){
+        console.log("No image uploaded");
+      }
 }
 
 function gotResult(error,results)
@@ -44,3 +47,16 @@ function gotResult(error,results)
         document.getElementById("object_name").innerHTML = results[0].label;
     };
 }
+
+window.addEventListener('load', function() {
+    document.querySelector('input[type="file"]').addEventListener('change', function() {
+        if (this.files && this.files[0]) {
+            var img = document.querySelector('#captured_image');
+            img.onload = () => {
+                URL.revokeObjectURL(img.src);  // no longer needed, free memory
+            }
+  
+            img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+        }
+    });
+  });

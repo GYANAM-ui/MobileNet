@@ -43,6 +43,12 @@ body
 {
     background: green;
 }
+.main_div img
+{
+    width: 310px;
+    height: 300px;
+    padding: 5px;
+}
 #camera , #result
 {
     width: 310px;
@@ -91,4 +97,10 @@ body
 .glow
 {
     text-shadow: 5px 5px 20px rgb(243, 43, 243);
+}
+#blah
+{
+    width: 310px;
+    height: 300px;
+    padding: 10px;
 }
