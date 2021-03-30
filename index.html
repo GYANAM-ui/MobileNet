@@ -1,66 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Mobile Net</title>
-    <link rel="icon" type="icon/x-image" href="https://img.icons8.com/dusk/64/000000/search--v1.png" sizes="16x16">
+<html>
+<head>
+	<title>CASE STUDY</title>
+    <link rel="icon" type="icon/x-image" href="https://cdn.iconscout.com/icon/premium/png-512-thumb/case-study-1-585719.png" sizes="16x16">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
-
     <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
+</head>
+<body>
 
-  <body>
-    <center>
-      <div class="col-xs-12 header_div">
-        <h1 class="glow">Image Identification App
-          <img id="xz" src="logo.gif">
-        </h1>
-      </div>
+<center>
+	<img src="banner.gif" style="width: 100%;height: 200px;">
+	<hr>
+<div class="container">
+    <ol>
+		<div class="text_images_and_result bob">
+			<li>
+				<b>Test Image - </b><img src="bottle.jpg" class="img-responsive">
+			</li>
+			<h5>Output on <b>Wolfram Project</b> -
+				<span>nail polish</span>  
+			</h5>
+			<h5>Output on <b>Mobilenet Model </b> -
+				<span>water bottle</span>  
+			</h5>
 
-      <div class="col-sm-6 col-xs-12 main_div">
-        <label>Webcam View - </label>
-        <div id="camera"></div>
-        <button onclick="take_snapshot()" id="btn1" class="btn btn-info">Capture Image</button>
-        <input type="file" />
-      </div>
+			<div class="mini_result">
+				<h4>Result - </h4>
+				<hr>
+				<h4>Mobilenet Model Is More Accurate</h4>
+			</div>
 
-      <div class="col-sm-6 col-xs-12 main_div">
-        <label>Snapshot View - </label>
-        <div id="result"><img id="captured_image" src="#"></div>
-        <button onclick="check()" id="btn2" class="btn btn-success">Identify Image</button>
-      </div>
+		</div>
+		<hr>
 
-    </center>
+    <div id="ma1" class="text_images_and_result bob">
+        <li>
+            <b>Test Image - </b><img src="headphone.jpg" class="img-responsive">
+        </li>
+        <h5>Output on <b>Wolfram Project</b> -
+            <span>switch</span>  
+        </h5>
+        <h5>Output on <b>Mobilenet Model </b> -
+            <span>stethoscope</span>  
+        </h5>
 
-<div class="col-xs-12 footer_div">
-  <h4 class="col-sm-6 col-xs-12">
-    <img src="blub.gif">
-    <p class="having">Result - </p>
-    <span id="object_name"></span>
-  </h4>
+        <div class="mini_result">
+            <h4>Result - </h4>
+            <hr>
+            <h4>Both Are Not More Accurate</h4>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="text_images_and_result bob">
+        <li>
+            <b>Test Image - </b><img src="Shoes.jpg" class="img-responsive">
+        </li>
+        <h5>Output on <b>Wolfram Project</b> -
+            <span>cleats</span>  
+        </h5>
+        <h5>Output on <b>Mobilenet Model </b> -
+            <span>running shoe</span>  
+        </h5>
+
+        <div class="mini_result">
+            <h4>Result - </h4>
+            <hr>
+            <h4>Mobilenet Model Is More Accurate</h4>
+        </div>
+
+    </div>
+    <hr>
+
+    <div id="ma2" class="text_images_and_result bob">
+        <li>
+            <b>Test Image - </b><img src="phone.jpg" class="img-responsive">
+        </li>
+        <h5>Output on <b>Wolfram Project</b> -
+            <span>computer mouse</span>  
+        </h5>
+        <h5>Output on <b>Mobilenet Model </b> -
+            <span>modem</span>  
+        </h5>
+
+        <div class="mini_result">
+            <h4>Result - </h4>
+            <hr>
+            <h4>Both Are Not More Accurate</h4>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="text_images_and_result bob">
+        <li>
+            <b>Test Image - </b><img src="Specs.jpg" class="img-responsive">
+        </li>
+        <h5>Output on <b>Wolfram Project</b> -
+            <span>eyeglasses</span>  
+        </h5>
+        <h5>Output on <b>Mobilenet Model </b> -
+            <span>sunglass</span>  
+        </h5>
+
+        <div class="mini_result">
+            <h4>Result - </h4>
+            <hr>
+            <h4>Wolfram Language Is More Accurate</h4>
+        </div>
+
+    </div>
+    <hr>
+
+    <div id="ma3" class="text_images_and_result bob">
+        <li>
+            <b>Test Image - </b><img src="scissor.jpg" class="img-responsive">
+        </li>
+        <h5>Output on <b>Wolfram Project</b> -
+            <span>scissors</span>  
+        </h5>
+        <h5>Output on <b>Mobilenet Model </b> -
+            <span>can opener, tin opener</span>  
+        </h5>
+
+        <div class="mini_result">
+            <h4>Result - </h4>
+            <hr>
+            <h4>Wolfram Language Is More Accurate</h4>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="text_images_and_result bob">
+        <li>
+            <b>Test Image - </b><img src="Synthesizer.jpg" class="img-responsive">
+        </li>
+        <h5>Output on <b>Wolfram Project</b> -
+            <span>keyboard</span>  
+        </h5>
+        <h5>Output on <b>Mobilenet Model </b> -
+            <span>harmonica, mouth organ, harp, mouth harp</span>  
+        </h5>
+
+        <div class="mini_result">
+            <h4>Result - </h4>
+            <hr>
+            <h4>Wolfram Language Is More Accurate</h4>
+        </div>
+
+    </div>
+    <hr>
+
+    <div id="ma4" class="text_images_and_result bob">
+        <li>
+            <b>Test Image - </b><img src="bird.jpg" class="img-responsive">
+        </li>
+        <h5>Output on <b>Wolfram Project</b> -
+            <span>Baltimore oriole</span>  
+        </h5>
+        <h5>Output on <b>Mobilenet Model </b> -
+            <span>brambling, Fringilla montifringilla</span>  
+        </h5>
+
+        <div class="mini_result">
+            <h4>Result - </h4>
+            <hr>
+            <h4>Wolfram Language Is More Accurate</h4>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="text_images_and_result bob">
+        <li>
+            <b>Test Image - </b><img src="watch.jpg" class="img-responsive">
+        </li>
+        <h5>Output on <b>Wolfram Project</b> -
+            <span>nail polish</span>  
+        </h5>
+        <h5>Output on <b>Mobilenet Model </b> -
+            <span>purse</span>  
+        </h5>
+
+        <div class="mini_result">
+            <h4>Result - </h4>
+            <hr>
+            <h4>Both Are Not More Accurate</h4>
+        </div>
+
+    </div>
+    <hr>
+
+    <div id="ma5" class="text_images_and_result bob">
+        <li>
+            <b>Test Image - </b><img src="bed.jpeg" class="img-responsive">
+        </li>
+        <h5>Output on <b>Wolfram Project</b> -
+            <span>bedroom</span>  
+        </h5>
+        <h5>Output on <b>Mobilenet Model </b> -
+            <span>bathtub, bathing tub, bath, tub</span>  
+        </h5>
+
+        <div class="mini_result">
+            <h4>Result - </h4>
+            <hr>
+            <h4>Wolfram Language Is More Accurate</h4>
+        </div>
+
+    </div>
+    <hr>
+</ol>
+<br><br>
+	<h4 style="box-shadow: 5px 5px 18px grey;letter-spacing: 2px;background: #F2BAC9;border-radius: 20px;padding: 20px;border:2px solid grey">
+	I have tested 10 images<br>
+	 <b>Mobilenet</b> have predicted 2 of them correctly. And <b>Wolfram Language</b> have predicted 5 of them correctly. And <b>Mobilenet and Wolfram Language</b> have not predicted 3 of them uncorrectly.<br>
+	 So according to my  case study <b>Wolfram Language</b> is more Accurate</h4>
 </div>
 
-    <div class="footer">
-      <p>Developed by - GYANAM GOGOI</p>
-    </div>
-    
-<script src="main.js"></script>
-  </body>
+<section>
+<p>This Case Study By - Gyanam Gogoi</p>
+<a href="mailto:teamprolly81@gmail.com?Subject=Greeting"><i class="glyphicon glyphicon-envelope">&nbsp;</i>my@info.com</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.instagram.com/rayhiphop_/" target="_blank"><i class="fa fa-instagram">&nbsp;</i>Instagram</a>
+<p>© Copyright 2015 Company Name. All rights reserved.</p>
+<p>The Copyright Act, 1957 (the ‘Act’) came into effect from January 1958. The Act has been amended five times since then, i.e.,
+ in 1983, 1984, 1992, 1994, 1999 and 2012. The Copyright (Amendment) Act, 2012 is the most substantial. The main reasons for amendments to the Copyright Act,
+ 1957 include to bring the Act in conformity with two WIPO internet treaties concluded in 1996 namely, the WIPO Copyright Treaty (“WCT”) and WIPO Performances 
+ and Phonograms Treaty (“WPPT”); to protect the Music and Film Industry and address its concerns; to address the concerns of the physically disabled and to protect 
+ the interests of the author of any work; Incidental changes; to remove operational facilities; and enforcement of rights. Some of the important amendments to the Copyright Act in 2012 are extension of copyright protection in the digital environment such as penalties for circumvention of technological protection measures and rights management information, and liability of internet service provider and introduction of statutory licenses for cover versions and broadcasting organizations; ensuring right to receive royalties for authors, and music composers, exclusive economic and moral rights to performers, equal membership rights in copyright societies for authors and other right owners and exception of copyrights for physically disabled to access any works.</p>
+<p>Please Don't Copy The Entire Things.</p>
+</section>
+
+<div class="copy_right_footer">
+    Developed by - Gyanam Gogoi
+</div>
+</center>
+
+</body>
 </html>
-
-
-
-
-
-
-
-
- 
-
